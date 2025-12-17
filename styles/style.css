@@ -34,6 +34,7 @@ header{
 .menusup right{
     display: flex;
     gap: 30px;
+    font-family: "Raleway", sans-serif;
     list-style: none;
 }
 .textomed{
@@ -41,6 +42,12 @@ header{
     margin: 0 600px 0 600px;
     padding: 100px;
     grid-area: textomed;
+}
+.textomed h1{
+    font-family: "Raleway", sans-serif;
+}
+.textomed p{
+    font-family: "Raleway", sans-serif;
 }
 .textomed button{
     margin: 50px;
@@ -58,6 +65,12 @@ imgs{
     grid-area: imgs;
     grid-template-columns: 300px 300px 300px;
 }
+imgs h1{
+    font-family: "Raleway", sans-serif;
+}
+imgs p{
+    font-family: "Raleway", sans-serif;
+}
 section img{
     width: 100%;
 }
@@ -65,12 +78,30 @@ section2{
     padding: 100px;
     
 }
+person h1{
+    font-family: "Raleway", sans-serif;
+}
+person p{
+    font-family: "Raleway", sans-serif;
+}
 section2 person{
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
     justify-content: center;
     grid-area: section2;
 
+}
+centrado h1{
+    font-family: "Raleway", sans-serif;
+}
+centrado p{
+    font-family: "Raleway", sans-serif;
+}
+info h1{
+    font-family: "Raleway", sans-serif;
+}
+info p{
+    font-family: "Raleway", sans-serif;
 }
 section3{
     display: flex;
@@ -132,6 +163,7 @@ footer{
     font-size: 10px;
     padding: 50px;
     color: #707288;
+    font-family: "Raleway", sans-serif;
     
 }
 footer white{
