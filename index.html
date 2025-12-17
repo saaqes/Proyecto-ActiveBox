@@ -1,183 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
+*{
+    margin: 0;
+}
+.contenedor{
+    display: grid;
+    grid-template-areas: "header
+                         menuheader
+                         menusup
+                         textomed
+                         imgs
+                         section2
+                         section3 section3
+                         section4
+                         section5
+                         footer";
+}
+header{
+    background-image: url(../assets/images/Layer\ 34.png);
+    color: white;
+}
+.menuheader{
+    background-color: rgba(22, 22, 56, 0.884);
+    grid-area: menuheader;
+}
+.menusup{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+    padding: 40px;
+    margin: 0 50px 0 50px;
+    grid-area: menusup;
+}
+.menusup right{
+    display: flex;
+    gap: 30px;
+    font-family: "Raleway", sans-serif;
+    list-style: none;
+}
+.textomed{
+    text-align: center;
+    margin: 0 600px 0 600px;
+    padding: 100px;
+    grid-area: textomed;
+}
+.textomed h1{
+    font-family: "Raleway", sans-serif;
+}
+.textomed p{
+    font-family: "Raleway", sans-serif;
+}
+.textomed button{
+    margin: 50px;
+    padding: 15px 50px 15px 50px;
+    background-color: #e84546;
+    border: none;
+    color: rgba(255, 255, 255, 0.76);
+}
+imgs{
+    margin: 100px;
+    display: grid;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    grid-area: imgs;
+    grid-template-columns: 300px 300px 300px;
+}
+imgs h1{
+    font-family: "Raleway", sans-serif;
+}
+imgs p{
+    font-family: "Raleway", sans-serif;
+}
+section img{
+    width: 100%;
+}
+section2{
+    padding: 100px;
+    
+}
+person h1{
+    font-family: "Raleway", sans-serif;
+}
+person p{
+    font-family: "Raleway", sans-serif;
+}
+section2 person{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    justify-content: center;
+    grid-area: section2;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto ActiveBox</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
+}
+centrado h1{
+    font-family: "Raleway", sans-serif;
+}
+centrado p{
+    font-family: "Raleway", sans-serif;
+}
+info h1{
+    font-family: "Raleway", sans-serif;
+}
+info p{
+    font-family: "Raleway", sans-serif;
+}
+section3{
+    display: flex;
+}
+section3 img{
+    width: 50%;
+}
+section4{
+    text-align: center;
+    padding: 100px;
+}
+section4 centrado button{
+    margin: 50px;
+    padding: 20px 70px 20px 70px;
+}
+section5{
+    background-color: #3a3e63;
+    
+}
+section5 info{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px;
+    grid-area: section5;
+}
+section5 share, location, about{
+    text-align: center;
+}
+section5 share, location, about p{
+    color: gray;
+}
+section5 share, location, about h1{
+    color: rgb(255, 255, 255);
+}
+section4 centrado button{
+    background-color: #e84546;
+    border: none;
+    color: rgba(255, 255, 255, 0.76);
+}
+.shareimg{
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: 50px 50px 50px;
+}
+.shareimg .box1, .box2, .box3{
+    border: 3px solid white;
+    padding: 10px;
+}
+section5, footer{
+    color: white;
+}
+section5 info div{
+    text-align: center;
+}
+footer{
+    background-color: #313455;
+    text-align: center;
+    font-size: 10px;
+    padding: 50px;
+    color: #707288;
+    font-family: "Raleway", sans-serif;
+    
+}
+footer white{
+    color: rgb(204, 204, 204);
+    grid-area: footer;
+}
+@media (min-width:352px) and (max-width:480px) {
+    section3{
+        display: flex;
+        
+    }
+    section2 person{
+        display: flex;
+        flex-direction: column;
+        margin: 300px;
+        text-align: center;
+    }
+    main imgs{
+        grid-template-columns: 300px 300px;
+        margin-right: 300px;
+    }
+    .menusup{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .menusup right{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
-<body>
-    <div class="contenedor">
-        <header>
-            <div class="menuheader">
-                <div class="menusup">
-                    <logo><img src="assets/images/logo.png" alt=""></logo>
-                    <right>
-                        <li>FEATURES</li>
-                        <li>WORKS</li>
-                        <li>OUR TEAM</li>
-                        <li>TESTIMONIALS</li>
-                        <li>DOWNLOAD</li>
-                    </right>
-                </div>
-                <div class="textomed">
-                    <h1>YOUR FAVORITE ONE PAGE <br> MULTI PURPOSE TEMPLATE</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim placeat, eius molestiae iure quis
-                        officia excepturi doloremque, sint in dolorum</p>
-                    <button>FIND OUT MORE</button>
-                </div>
-            </div>
-        </header>
-        <main>
-            <imgs>
-                <img1>
-                    <img src="assets/images/Layer 48.png" alt="">
-                    <h1>EASILY CUSTOMISED</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, pariatur molestias cupiditate
-                        optio saepe ad necessitatibus possimus accusamus exercitationem alias velit delectus modi
-                        dignissimos recusandae, molestiae eaque nisi quibusdam beatae?</p>
-                </img1>
-                <img1>
-                    <img src="assets/images/Layer 44.png" alt="">
-                    <h1>EASILY CUSTOMISED</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, pariatur molestias cupiditate
-                        optio saepe ad necessitatibus possimus accusamus exercitationem alias velit delectus modi
-                        dignissimos recusandae, molestiae eaque nisi quibusdam beatae?</p>
-                </img1>
-                <img1>
-                    <img src="assets/images/Layer 47.png" alt="">
-                    <h1>EASILY CUSTOMISED</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, pariatur molestias cupiditate
-                        optio saepe ad necessitatibus possimus accusamus exercitationem alias velit delectus modi
-                        dignissimos recusandae, molestiae eaque nisi quibusdam beatae?</p>
-                </img1>
-                <img1>
-                    <img src="assets/images/Layer 46.png" alt="">
-                    <h1>EASILY CUSTOMISED</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, pariatur molestias cupiditate
-                        optio saepe ad necessitatibus possimus accusamus exercitationem alias velit delectus modi
-                        dignissimos recusandae, molestiae eaque nisi quibusdam beatae?</p>
-                </img1>
-                <img1>
-                    <img src="assets/images/Layer 43.png" alt="">
-                    <h1>EASILY CUSTOMISED</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, pariatur molestias cupiditate
-                        optio saepe ad necessitatibus possimus accusamus exercitationem alias velit delectus modi
-                        dignissimos recusandae, molestiae eaque nisi quibusdam beatae?</p>
-                </img1>
-                <img1>
-                    <img src="assets/images/Layer 45.png" alt="">
-                    <h1>EASILY CUSTOMISED</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, pariatur molestias cupiditate
-                        optio saepe ad necessitatibus possimus accusamus exercitationem alias velit delectus modi
-                        dignissimos recusandae, molestiae eaque nisi quibusdam beatae?</p>
-                </img1>
-            </imgs>
-        </main>
-        <section>
-            <img src="assets/images/background.png" alt="">
-        </section>
-        <section2>
-            <person>
-                <person1>
-                    <img src="assets/images/Layer 30.png" alt="">
-                    <h1>Ruth Woods</h1>
-                    <p>FOUNDER, CEO</p>
-                    <text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores ratione quae illum hic
-                        numquam commodi ex voluptates esse. Ad tempore vel consequatur possimus neque assumenda nihil
-                        quaerat laboriosam tenetur similique!</text>
-                    <social>
-                        <img src="assets/images/Shape 6 2.png" alt="">
-                        <img src="assets/images/Shape 3 2.png" alt="">
-                        <img src="assets/images/Shape 11 2.png" alt="">
-                    </social>
-                </person1>
-                <person1>
-                    <img src="assets/images/Layer 31.png" alt="">
-                    <h1>Timothy Reed</h1>
-                    <p>CO-FOUNDER DEVELOPER</p>
-                    <text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores ratione quae illum hic
-                        numquam commodi ex voluptates esse. Ad tempore vel consequatur possimus neque assumenda nihil
-                        quaerat laboriosam tenetur similique!</text>
-                    <social>
-                        <img src="assets/images/Shape 6 2.png" alt="">
-                        <img src="assets/images/Shape 3 2.png" alt="">
-                        <img src="assets/images/Shape 11 2.png" alt="">
-                    </social>
-                </person1>
-                <person1>
-                    <img src="assets/images/Layer 32.png" alt="">
-                    <h1>Victoria Valdez</h1>
-                    <p>UL DESIGNER</p>
-                    <text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores ratione quae illum hic
-                        numquam commodi ex voluptates esse. Ad tempore vel consequatur possimus neque assumenda nihil
-                        quaerat laboriosam tenetur similique!</text>
-                    <social>
-                        <img src="assets/images/Shape 6 2.png" alt="">
-                        <img src="assets/images/Shape 3 2.png" alt="">
-                        <img src="assets/images/Shape 11 2.png" alt="">
-                    </social>
-                </person1>
-                <person1>
-                    <img src="assets/images/Layer 33.png" alt="">
-                    <h1>Beverly Little</h1>
-                    <p>DATA SCIENTIST</p>
-                    <text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores ratione quae illum hic
-                        numquam commodi ex voluptates esse. Ad tempore vel consequatur possimus neque assumenda nihil
-                        quaerat laboriosam tenetur similique!</text>
-                    <social>
-                        <img src="assets/images/Shape 6 2.png" alt="">
-                        <img src="assets/images/Shape 3 2.png" alt="">
-                        <img src="assets/images/Shape 11 2.png" alt="">
-                    </social>
-                </person1>
-            </person>
-        </section2>
-        <section3>
-                <img src="assets/images/Layer 19.png" alt="">
-                <img src="assets/images/Layer 18.png" alt="">
-        </section3>
-        <section4>
-            <centrado>
-                <h1>Are You Ready to Start? Download Now For Free</h1>
-                <p>FUSCE DAPIBUS, TELLUS AC CURSUS COMMODO</p>
-                <button>DOWNLOAD HERE</button>
-            </centrado>
-        </section4>
-        <section5>
-            <info>
-                <location>
-                    <h1>LOCATION</h1>
-                    <p>3481 Melrose Place <br> Beverly Hills, CA 90210</p>
-                </location>
-                <share>
-                    <h1>SHARE WITH LOVE</h1>
-                    <div class="shareimg">
-                        <div class="box1">
-                            <img src="assets/images/Shape 6 5.png" alt="">
-                        </div>
-                        <div class="box2">
-                            <img src="assets/images/Shape 3 5.png" alt="">
-                        </div>
-                        <div class="box3">
-                            <img src="assets/images/Shape 11 5.png" alt="">
-                        </div>
-                    </div>
-                </share>
-                <about>
-                    <h1>ABOUT ACTIVEBOX</h1>
-                    <p>Crasa justo odio, dapibus ac facilisis in. egestas eget <br> quam. Donex ullamcorper nulla non
-                        metus auctor <br> fringilla</p>
-                </about>
-            </info>
-        </section5>
-        <footer>
-            <h1>Copyright © 2015 ActiveBox. All Rights Reserved <br> Made with ❤️ <white>by kamal Chaneman</white>
-            </h1>
-        </footer>
-    </div>
-</body>
+}
 
-</html>
+@media (min-width:481px) and (max-width:768px) {
+    section3{
+        display: flex;
+        flex-direction: column;
+    }
+    person{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:769px) and (max-width:920px) {
+    section3 > img:nth-child(2){
+    width: 40%;
+    }
+}
+
+@media (min-width:921px) and (max-width:1279px) {
+    .menuheader{
+    display: flex;
+    justify-content: center;
+    }
+}
+}
+
+@media (min-width:1280px) {
+    section3 {
+    width: 100%;
+}
+    section img {
+        width: 99%;
+    }
+}
